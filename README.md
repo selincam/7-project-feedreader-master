@@ -10,13 +10,15 @@ Feed Reader Testing
 * [How will this help my career?](#howWillThisHelpMyCareer)
 * [How will I complete this project?](#howWillICompleteThisProject)
 
-## How to Run
 
+## How to Run
+Download or clone the repository to your computer from this link: https://github.com/selincam/7-project-feedreader-master.
+Open the 'index.html' file in your browser.
+You will see the test code I wrote below the page.
 
 ## Project Overview
 
 In this project you are given a web-based application that reads RSS feeds. The original developer of this application clearly saw the value in testing, they've already included [Jasmine](http://jasmine.github.io/) and even started writing their first test suite! Unfortunately, they decided to move on to start their own company and we're now left with an application with an incomplete test suite. That's where you come in.
-
 
 ## Why this Project?
 
