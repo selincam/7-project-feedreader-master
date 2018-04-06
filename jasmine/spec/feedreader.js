@@ -38,13 +38,7 @@ $(function() {
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
-        it('name has been defined', function() {
-            for(var i = 0; i < allFeeds.length; i++) {
-                expect(allFeeds[i].name).toBeDefined();
-                expect(allFeeds[i].name.length).not.toBe(0);
-            }
-        });
-        it('name is not empty', function() {
+        it('name is defined and not empty', function() {
             allFeeds.forEach(function(feed) {
                 expect(feed.name).toBeDefined();
                 expect(feed.name.length).not.toBe(0);
@@ -69,9 +63,12 @@ $(function() {
          * clicked and does it hide when clicked again.
          */
         it('the menu changes visibility', function() {
-        /* Trigger event on menu */
+            // Show menu and test
             $('.menu-icon-link').trigger('click');
             expect($htmlBody.hasClass('menu-hidden')).toBe(false);
+            // Hide menu and test
+            $('.menu-icon-link').trigger('click');
+            expect($htmlBody.hasClass('menu-hidden')).toBe(true);
         });
     });
 
@@ -88,8 +85,9 @@ $(function() {
          * a single .entry element within the .feed container.
          */
         it('has been loaded', function(done) {
-            expect($('.feed').children().length).not.toBe(0);
+            expect($('.feed .entry').length).not.toBe(0);
             done();
+
         });
     });
 
